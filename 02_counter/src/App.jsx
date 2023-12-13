@@ -5,19 +5,23 @@ import './App.css'
 
 function App() {
 
-  let [counter, setCounter] = useState(0)
+  let [counter, setCounter] = useState(14)
   // let counter = 0;
 
   const addValue = ()=>{
-    console.log("clicked", counter);
-    // counter = counter +1
     setCounter(counter+1)
+    if (counter === 20) {
+      setCounter(13)
+    }
   }
 
   const decreaseValue = ()=>{
     console.log("clicked", counter);
   //  counter = counter -1
     setCounter(counter-1)
+    if (counter===0) {
+      setCounter(14)
+    }
   }
 
   const reset = ()=>{
